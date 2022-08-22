@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+    <!--font awesome cnd link-->
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="/Backend/model/pricing.js"></script>
+</head>
+
+  <body>
+    <h1>Palitronica Coding Challenge - Swapnil Rana</h1>
+  
+    <div class = "input"> 
+      <form>
+        <table class = "inTable" width="100%">
+          <col style="width:80%">
+	        <col style="width:20%">
+          <thead> 
+          <tr>
+            <td><label for="custId">Customer Id:</label><br /></td>
+            <td><input type="text" id="custId" name="custId" /><br /></td>
+          </tr>
+          <tr>
+          </thead>
+          <tbody>
+            <td>
+              <label for="quantity1">Choose quantity for Televison:</label>
+            </td>
+            <td>
+              <input class = "box"
+                type="number"
+                id="quantity1"
+                name="quantity1"
+                value="0"
+                min="0"
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="quantity2">Choose quantity for Speakers:</label>
+            </td>
+            <td>
+              <input class = "box"
+                type="number"
+                id="quantity2"
+                name="quantity2"
+                value="0"
+                min="0"
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="quantity2">Choose quantity for RGB lights:</label>
+            </td>
+            <td>
+              <input class = "box"
+                type="number"
+                id="quantity3"
+                name="quantity3"
+                value="0"
+                min="0"
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="quantity2">Choose quantity for Set-Top Box:</label>
+            </td>
+            <td>
+              <input class = "box"
+                type="number"
+                id="quantity4"
+                name="quantity4"
+                value="0"
+                min="0"
+              /><br />
+            </td>
+          </tr>
+        </tbody>
+
+              <!--<tr>
+              <td><label for="itemQuantity">Quantity:</label><br></td>
+              <td><input type="text" id="itemQuantity" name="lname"></td>
+              </tr>-->
+          <tr>
+            <td>
+              <button type="button" onclick="calculateFinalPrice()">
+                Calculate
+              </button>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div class = "resSection" id="resultSection" style="display: none">
+      <table class = "resTable" id="resultGrid" width="100%">
+        <p class = "resText" id="resultCustName"> - Customer Name is: </p>
+        <col style="width:90%">
+	      <col style="width:50%">
+
+        <thead> 
+          <td>Products</td>
+          <td>Price</td>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Television/s:</td>
+          <td><p id="resultTotalPriceProduct1"></p></td>
+        </tr>
+        <tr>
+          <td>Speaker/s:</td>
+          <td><p id="resultTotalPriceProduct2"></p></td>
+        </tr>
+        <tr>
+          <td>RGB Lights:</td>
+          <td><p id="resultTotalPriceProduct3"></p></td>
+        </tr>
+        <tr>
+          <td>Set-Top Box/s:</td>
+          <td><p id="resultTotalPriceProduct4"></p></td>
+        </tr>
+        <tr>
+          <td>Total Taxes:</td>
+          <td><p id="resultTotalTax"></p></td>
+        </tr>
+        <tr class = "total">
+          <td>Total Price:</td>
+          <td><p id="resultTotalPrice"></p></td>
+          
+        </tr>
+      </tbody>
+      </table>
+    </div>
+
+
+  </body>
+</html>
